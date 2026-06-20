@@ -1,0 +1,23 @@
+{
+  "rules": [
+    {
+      "name": "stub email in claude bootstrap",
+      "match": {
+        "host": "api.example.com",
+        "url_pattern": "/bootstrap"
+      },
+      "json_replace_keys": {
+        "account_email": "user@example.com"
+      }
+    },
+
+    {
+      "name": "force pro tier everywhere",
+      "match": {},
+      "json_replace_keys": {
+        "organization_type": "claude_pro",
+        "seat_tier": "pro"
+      }
+    }
+  ]
+}

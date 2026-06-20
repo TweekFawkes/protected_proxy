@@ -1,0 +1,26 @@
+[project]
+name = "web-proxy"
+version = "0.1.0"
+description = "Add your description here"
+requires-python = ">=3.11"
+dependencies = [
+    "mitmproxy>=11.0.2",
+]
+
+[tool.pycrucible]
+entrypoint = "main.py"
+patterns.include = [
+    "*.py",
+    "rules.example.json",
+]
+patterns.exclude = [
+    ".git/**/*",
+    ".venv/**/*",
+    "dist/**/*",
+    "logs/**/*",
+    "rules.json",
+    ".web-proxy.env",
+    "tasks/**/*",
+    "**/__pycache__/**",
+    "**/*.pyc",
+]
